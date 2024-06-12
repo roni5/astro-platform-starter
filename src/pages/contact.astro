@@ -1,0 +1,55 @@
+
+<p>
+  Digital Distrubtion.
+</p>
+<div class="feedback-form">
+<form id="form"  action="https://api.web3forms.com/submit" method="POST">
+ <input type="hidden" name="access_key" value="226d0972-a38b-402f-937a-360a449bb4a9" />
+  <label>First Name</label>
+  <input type="text" name="name" placeholder="First name" required />
+
+  <label>Email</label>
+  <input type="email" name="email" inputmode="email" placeholder="Email Address" required />
+
+  <label>Message</label>
+  <textarea name="message" rows="4" placeholder="Message" required></textarea>
+
+  <button type="submit">Send Message</button>
+</form>
+</div>
+<style>
+  .feedback-form {
+    margin: 40px 40px;
+    min-width: 250px;
+    width: 45%;
+  }
+  label {
+    font-size: 16px;
+  }
+  input,
+  textarea,
+  button {
+    border-radius: 5px;
+    border: 1px solid #cbd5e1;
+    font-size: inherit;
+    margin: 15px 0;
+    padding: 12px 20px;
+    width: 100%;
+  }
+  button {
+    background-color: #2bdcd2;
+    border: 1px solid #2bdcd2;
+    color: #1e293b;
+    font-size: 16px;
+    width: 50%;
+  }
+  .hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+</style>
