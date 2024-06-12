@@ -1,103 +1,111 @@
 ---
+import '../../src/styles/globals.css';
 import Layout from '../layouts/Layout.astro';
 import FeedbackForm from '../components/FeedbackForm.astro';
-import ContextAlert from '../components/ContextAlert.astro';
-import Markdown from '../components/Markdown.astro';
-
-const explainer = `
-
-## Introducing - A World of Fine Wines & Accessories
-
-For over a decade, Digital Distrubtion has been the premier destination for wine enthusiasts and connoisseurs in London UK. Our passion for exceptional wines and accessories has taken us on a global journey, sourcing the finest offerings from renowned vineyards and artisans around the world.
-
-### A Curated Selection of Exquisite Wines
-
-At [Company Name], we pride ourselves on our meticulously curated wine collection. Our team of sommeliers and wine experts scours the globe, seeking out the most remarkable vintages from celebrated wine regions. From the bold and robust reds of Bordeaux to the crisp and refreshing whites of New Zealand, our cellar is a true celebration of the art of winemaking.
-
-Whether you're a seasoned collector or simply seeking a special bottle for a memorable occasion, our knowledgeable staff is dedicated to guiding you through our extensive selection, ensuring you find the perfect wine to suit your palate and preferences.
-
-### Elevating the Wine Experience
-
-In addition to our exceptional wine offerings, Digital Distrubtion is committed to enhancing your overall wine experience. Our carefully selected range of accessories is designed to complement and elevate your enjoyment of fine wines.
-
-- **Wine Racks**: Showcase your prized collection with our elegant and functional wine racks, crafted from premium materials to ensure your bottles are stored in optimal conditions.
-- **Wine Chillers**: Maintain the perfect serving temperature for your whites and rosés with our stylish and efficient wine chillers, ensuring every sip is as refreshing as intended.
-- **Packaging**: Whether you're gifting a special bottle or transporting your wines, our premium packaging solutions ensure your treasured vintages arrive safely and in impeccable condition.
-
-### A Legacy of Excellence
-
-For over 11 years, Digital Distrubtion has built a reputation for unparalleled quality and exceptional service. Our commitment to sourcing the finest wines and accessories from around the globe has earned us a loyal following among wine enthusiasts in [City/Region] and beyond.
-
-Visit our showroom today and embark on a journey of discovery, where every bottle tells a story, and every sip is a celebration of the art of winemaking.
-`;
 ---
 
-<Layout title="Welcome to Digital Distrubtion.">
-<main>
-    <ContextAlert class="mb-4" />
-    <h1 class="mb-10">Digital Distribution</h1>
-     <FeedbackForm />
-    <Markdown content={explainer} class="text-lg mb-10" />
-    <p class="mb-8">
-        <a href="https://docs.netlify.com/frameworks/astro/" class="btn btn-lg btn-orange-400 sm:btn-wide">Read the Docs</a>
-    </p>
-    </main
-</Layout>
-<style>
-	main {
-		margin: auto;
-		padding: 1rem;
-		width: 800px;
-		max-width: calc(100% - 2rem);
-		color: white;
-		font-size: 20px;
-		line-height: 1.6;
-	}
-	.astro-a {
-		position: absolute;
-		top: -32px;
-		left: 50%;
-		transform: translatex(-50%);
-		width: 220px;
-		height: auto;
-		z-index: -1;
-	}
-	h1 {
-		font-size: 4rem;
-		font-weight: 700;
-		line-height: 1;
-		text-align: center;
-		margin-bottom: 1em;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		margin-bottom: 2rem;
-		border: 1px solid rgba(var(--accent-light), 25%);
-		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
-		padding: 1.5rem;
-		border-radius: 8px;
-	}
-	.instructions code {
-		font-size: 0.8em;
-		font-weight: bold;
-		background: rgba(var(--accent-light), 12%);
-		color: rgb(var(--accent-light));
-		border-radius: 4px;
-		padding: 0.3em 0.4em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent-light));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 2rem;
-		padding: 0;
-	}
+   <Layout class="flex flex-col min-h-[100dvh]">
+    <div class="flex flex-col min-h-[100dvh]">
+      <main class="flex-1">
+        <section class="w-full py-12 md:py-24 lg:py-32 xl:py-48">
+          <div class="container px-4 md:px-6">
+            <div class="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
+              <div class="flex flex-col justify-center space-y-4">
+                <div class="space-y-2">
+                  <h1 class="text-3xl font-bold text-[#BD9855] tracking-tighter sm:text-5xl xl:text-6xl/none">
+                    Elevate Your World with Fine Wines
+                  </h1>
+                  <p class="max-w-[600px] text-gray-500 md:text-xl dark:text-gray-400">
+                   <span class="text-xl text-[#BD9855] mx-auto tracking-tight">Pivotal </span>  is a leading Distrubtor of premier Specialty wines, with exceptional taste.
+                  </p>
+                </div>
+                <div class="flex flex-col gap-2 min-[400px]:flex-row">
+                  <a
+                    href="/contact"
+                    class="no-underline inline-flex h-10 items-center justify-center rounded-md bg-[#BD9855] px-8 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300"
+                    prefetch={false}
+                  >
+                    Get in Touch
+                  </a>
+                     
+                </div>
+              </div>
+              <img
+                src="/images/wineglass.jpg"
+                width="750"
+                height="750"
+                alt="Hero"
+                class="mx-auto  overflow-hidden rounded-xl object-cover sm:w-full lg:order-last lg:aspect-square"
+              />
+            </div>
+          </div>
+        </section>
+        <section id="services" class="w-full py-12 md:py-24 lg:py-32 bg-zinc-900 dark:bg-gray-800">
+          <div class="container px-4 md:px-6">
+            <div class="flex flex-col items-center justify-center space-y-4 text-center">
+              <div class="space-y-2">
+                <h2 class="text-3xl font-bold tracking-wider sm:text-5xl text-[#BD9855]">A World of Fine Wines</h2>
+                <p class="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+                  Pivotal Distribution offers a comprehensive suite of - Fine Wines & Accessories.
+                </p>
+              </div>
+            </div>
+            <div class="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12">
+              <div class="flex flex-col justify-center space-y-4">
+                <ul class="grid gap-6">
+                  <li>
+                    <div class="grid gap-1">
+                      <h3 class="text-xl font-bold text-[#BD9855] ">A Curated Selection of Exquisite Wines</h3>
+                      <p class="text-gray-500 dark:text-gray-400">
+                        Our passion for exceptional wines and accessories has taken us on a global journey, sourcing the finest offerings from renowned vineyards and artisans around the world.
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="grid gap-1">
+                      <h3 class="text-xl font-bold text-[#BD9855]">Wine Racks:</h3>
+                      <p class="text-gray-500 dark:text-gray-400">
+                        Our carefully selected range of accessories is designed to complement and elevate your enjoyment of fine wines.
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="grid gap-1">
+                      <h3 class="text-xl font-bold text-[#BD9855]">Wine Chillers</h3>
+                      <p class="text-gray-500 dark:text-gray-400">Maintain the perfect serving temperature for your whites and rosés with our stylish and efficient wine chillers, ensuring every sip is as refreshing as intended.</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <img
+                src="/images/cellar.jpg"
+                width="50"
+                height="50"
+                alt="Services"
+                class="mx-auto   object-cover object-center w-full "
+              />
+            </div>
+          </div>
+        </section>
+        <section id="contact" class="w-full py-12 md:py-24 lg:py-32 border-t bg-gray-100 ">
+          <div class="container grid items-center justify-center gap-4 px-4 text-center md:px-6  dark:bg-gray-800">
+            <div class="space-y-2 mt-4">
+              <h2 class="text-3xl  space-y-2 font-bold tracking-tighter md:text-4xl/tight text-[#BD9855]">Get in Touch</h2>
+              <p class="mx-auto max-w-[600px]  md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+               our premium packaging solutions ensure your treasured vintages arrive safely and in impeccable condition.
+              </p>
+            </div>
+            <div class="mx-auto w-full max-w-sm space-y-2">
+               <FeedbackForm />
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    </Layout>
+
+    <style>
+  .no-underline {
+    text-decoration: none;
+  }
 </style>

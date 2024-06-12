@@ -1,0 +1,28 @@
+---
+import '../../src/styles/globals.css';
+import Layout from '../layouts/Layout.astro';
+---
+
+<html>
+  <head>
+    <title>My page</title>
+    <script src="https://unpkg.com/htmx.org@1.9.6"
+      integrity="sha384-FhXw7b6AlE/jyjlZH5iHa/tTe9EpJ1Y55RjcgPbjeWMskSxZt1v9qkxLJWNJaGni"
+      crossorigin="anonymous"></script>
+  </head>
+</html>
+<section class="flex flex-col w-full max-w-5xl mx-auto grow py-12">
+  <div id="parent-div">
+  Go Back <a href="/">Home</a>
+  </div>
+
+  <button hx-post="/partials/clicked/"
+    hx-trigger="click"
+    hx-target="#parent-div"
+    hx-swap="innerHTML"
+  >
+      Click Me!
+  </button>
+</section>
+
+ 

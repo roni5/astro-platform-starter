@@ -54,7 +54,7 @@
       Please enter your message.
     </div>
   </div>
-  <button type="submit" size="lg" block>Send Message</button>
+  <button type="submit" size="lg" block  class="btn btn-lg btn-[#BD9855] sm:btn-wide">Send Message</button>
   <div id="result" class="mt-3 text-center"></div>
 </form>
 
@@ -76,6 +76,18 @@
   .was-validated :invalid {
     border-color: #dc3545;
   }
+  button {
+    background-color: #BD9855;
+    border: 1px solid #BD9855;
+    color: #1e293b;
+    font-size: 16px;
+    width: 50%;
+  }
+  button:hover {
+    background-color: #1e293b;
+    border: 2px inset #1e293b;
+    color: #BD9855;
+  } 
 </style>
 
 <script is:inline>

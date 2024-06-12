@@ -1,8 +1,15 @@
+---
+import '../../src/styles/globals.css';
+import Layout from '../layouts/Layout.astro';
+---
 
+<Layout title="Contact">
+<main class="flex flex-col w-full max-w-5xl mx-auto grow py-12">
+<div class="mx-auto px-4 sm:px-6 lg:px-8 justify-center items-center">
 <p>
-  Digital Distrubtion.
+  Pivotal Distrubtion.
 </p>
-<div class="feedback-form">
+<div class="feedback-form flex flex-col  justify-center items-center">
 <form id="form"  action="https://api.web3forms.com/submit" method="POST">
  <input type="hidden" name="access_key" value="226d0972-a38b-402f-937a-360a449bb4a9" />
   <label>First Name</label>
@@ -17,12 +24,35 @@
   <button type="submit">Send Message</button>
 </form>
 </div>
+<div class="flex flex-col justify-center items-center">
+<p>We'll get back to you as soon as possible.</p> 
+</div>
+</main>
+</Layout>
 <style>
+
+      main {
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+}
   .feedback-form {
-    margin: 40px 40px;
+    margin: 40px 140px;
     min-width: 250px;
     width: 45%;
   }
+
+  @media only screen and (max-width: 768px) {
+  .feedback-form {
+    margin: 20px auto; /* Center the form horizontally */
+    min-width: 100%; /* Allow full width on smaller screens */
+    width: auto; 
+    max-width: 100%; /* Prevent horizontal scrolling on smaller screens */
+  }
+   button {
+    width: 100%; /* Make button full width on mobile */
+  }
+}
   label {
     font-size: 16px;
   }
@@ -37,12 +67,17 @@
     width: 100%;
   }
   button {
-    background-color: #2bdcd2;
-    border: 1px solid #2bdcd2;
+    background-color: #BD9855;
+    border: 1px solid #BD9855;
     color: #1e293b;
     font-size: 16px;
     width: 50%;
   }
+  button:hover {
+    background-color: #1e293b;
+    border: 2px inset #1e293b;
+    color: #BD9855;
+  } 
   .hidden {
     clip: rect(0 0 0 0);
     clip-path: inset(50%);

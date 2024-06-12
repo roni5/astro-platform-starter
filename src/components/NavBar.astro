@@ -1,0 +1,41 @@
+---
+import Logo from '../components/Logo.astro';
+
+---
+   <header class="bg-white dark:bg-gray-900 shadow  rounded-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+          <div class="flex items-center">
+            <a href="/">
+             <Logo />
+            </a>
+            <h1 class="ml-3 text-2xl text-[#BD9855] font-bold">Pivotal </h1>
+          </div>
+          <nav class="hidden md:flex items-center space-x-4">
+            <a
+              class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
+              href="#"
+            ></a>
+            <a
+              class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
+              href="/"
+            >
+              Home
+            </a>
+            <a
+              class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
+              href="/about"
+            >
+              About
+            </a>
+            <a
+              class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
+              href="/contact"
+            >
+              Contact
+            </a>
+            {/* <span class="text-blue-500 text-base dark:text-amber-400">
+              <Crumbs />
+            </span> */}
+          </nav>
+        </div>
+      </header>
