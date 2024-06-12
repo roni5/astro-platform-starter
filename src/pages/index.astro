@@ -4,18 +4,38 @@ import ContextAlert from '../components/ContextAlert.astro';
 import Markdown from '../components/Markdown.astro';
 
 const explainer = `
-An Astro website can go way beyond static pages - on the right platform.
 
-Netlify supports not only [Streaming SSR](https://docs.astro.build/en/guides/server-side-rendering/#html-streaming) and fast [Edge Middleware](https://docs.astro.build/en/guides/middleware/), but also [on-demand revalidation](https://www.netlify.com/blog/cache-tags-and-purge-api-on-netlify/) and [stale-while-revalidate](https://www.netlify.com/blog/swr-and-fine-grained-cache-control/). 
-Any page or data can be rebuilt only when needed, without site visitors ever getting a performance hit.
+## Introducing - A World of Fine Wines and Accessories
+
+For over a decade, Digital Distrubtion has been the premier destination for wine enthusiasts and connoisseurs in London UK. Our passion for exceptional wines and accessories has taken us on a global journey, sourcing the finest offerings from renowned vineyards and artisans around the world.
+
+### A Curated Selection of Exquisite Wines
+
+At [Company Name], we pride ourselves on our meticulously curated wine collection. Our team of sommeliers and wine experts scours the globe, seeking out the most remarkable vintages from celebrated wine regions. From the bold and robust reds of Bordeaux to the crisp and refreshing whites of New Zealand, our cellar is a true celebration of the art of winemaking.
+
+Whether you're a seasoned collector or simply seeking a special bottle for a memorable occasion, our knowledgeable staff is dedicated to guiding you through our extensive selection, ensuring you find the perfect wine to suit your palate and preferences.
+
+### Elevating the Wine Experience
+
+In addition to our exceptional wine offerings, Digital Distrubtion is committed to enhancing your overall wine experience. Our carefully selected range of accessories is designed to complement and elevate your enjoyment of fine wines.
+
+- **Wine Racks**: Showcase your prized collection with our elegant and functional wine racks, crafted from premium materials to ensure your bottles are stored in optimal conditions.
+- **Wine Chillers**: Maintain the perfect serving temperature for your whites and rosés with our stylish and efficient wine chillers, ensuring every sip is as refreshing as intended.
+- **Packaging**: Whether you're gifting a special bottle or transporting your wines, our premium packaging solutions ensure your treasured vintages arrive safely and in impeccable condition.
+
+### A Legacy of Excellence
+
+For over 11 years, Digital Distrubtion has built a reputation for unparalleled quality and exceptional service. Our commitment to sourcing the finest wines and accessories from around the globe has earned us a loyal following among wine enthusiasts in [City/Region] and beyond.
+
+Visit our showroom today and embark on a journey of discovery, where every bottle tells a story, and every sip is a celebration of the art of winemaking.
 `;
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Welcome to Digital Distrubtion.">
     <ContextAlert class="mb-4" />
-    <h1 class="mb-10">Netlify Platform Starter for Astro</h1>
+    <h1 class="mb-10">Digital Distribution</h1>
     <Markdown content={explainer} class="text-lg mb-10" />
     <p class="mb-8">
-        <a href="https://docs.netlify.com/frameworks/astro/" class="btn btn-lg btn-primary sm:btn-wide">Read the Docs</a>
+        <a href="https://docs.netlify.com/frameworks/astro/" class="btn btn-lg btn-orange-400 sm:btn-wide">Read the Docs</a>
     </p>
 </Layout>
